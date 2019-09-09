@@ -33,7 +33,7 @@ The `HL64` data type is an alias of the structure which holds high 32 bits in `h
 
 ### HL64 r = Uadd64 (HL64 a, HL64 b)
 
-The unsigned integer value _A_ and _B_ can be represented as follows:
+Two arguments, `a` and `b`, represent the unsigned integer values _A_ and _B_ as follows:<br>
 _A = a.hi * 2<sup>32</sup> + a.lo_,
 _B = b.hi * 2<sup>32</sup> + b.lo_
 
