@@ -14,7 +14,7 @@ Consider a situation where you are using a 32-bit CPU and only 32-bit integer op
 
 ## Problem specification
 
-Write four C functions named `Uadd64()`, `Usub64()`, `Umul64()`, and `Udiv64()` which receive two 64-bit integers and compute the addition, subtraction, multiplication, and division of those arguments, respectively. Note that we use two 32-bit integers to represent a 64-bit integer. The prototype of each function is as follows:
+Write four C functions named `Uadd64()`, `Usub64()`, `Umul64()`, and `Udiv64()` which receive two 64-bit integers and compute the addition, subtraction, multiplication, and division of those arguments, respectively. Note that we use two 32-bit unsigned integers to represent a 64-bit unsigned integer. The prototype of each function is as follows:
 
 ```
 typedef unsigned int u32;
