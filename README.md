@@ -31,7 +31,7 @@ HL64 Udiv64 (HL64 a, HL64 b);
 
 The `HL64` data type is an alias of the structure which holds high 32 bits in `hi` and low 32 bits in `lo` of a single 64-bit unsigned integer. Two arguments, `a` and `b`, represent the operands. Similarly, the upper 32 bits and the lower 32 bits of the result should be stored separately in its `hi` and `lo` fields. The `u32` data type is an alias of the unsigned integer (32-bit) type.
 
-### HL64 r = Uadd64 (HL64 a, HL64 b)  (10 points)
+### Uadd64 (HL64 a, HL64 b)  (10 points)
 
 Two arguments, `a` and `b`, represent the unsigned integer values _A_ and _B_ as follows:<br>
 _A = a.hi * 2<sup>32</sup> + a.lo_,<br>
