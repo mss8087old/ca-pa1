@@ -31,7 +31,7 @@ HL64 Udiv64 (HL64 a, HL64 b);
 
 The `HL64` data type is an alias of the structure which holds high 32 bits in `hi` and low 32 bits in `lo` of a single 64-bit unsigned integer. Two arguments, `a` and `b`, represent the operands. Similarly, the upper 32 bits and the lower 32 bits of the result should be stored separately in its `hi` and `lo` fields. The `u32` data type is an alias of the unsigned integer (32-bit) type.
 
-### HL64 r = Uadd64 (HL64 a, HL64 b)
+### HL64 r = Uadd64 (HL64 a, HL64 b)  (10 points)
 
 Two arguments, `a` and `b`, represent the unsigned integer values _A_ and _B_ as follows:<br>
 _A = a.hi * 2<sup>32</sup> + a.lo_,<br>
@@ -42,21 +42,21 @@ _R = r.hi * 2<sup>32</sup> + r.lo_ and _R = (A + B) mod 2<sup>64</sup>_.
 
 We need the total of 65 bits to represent _(A + B)_ correctly. The modulo (_mod 2<sup>64</sup>_) operation indicates that when the MSB (Most Significant Bit, i.e., 65th bit) of _(A + B)_ is one, it is truncated. This is an overflow condition in which the result _R_ can be smaller than _A_ (or _B_).
 
-### Usub64 (HL64 a, HL64 b)
+### Usub64 (HL64 a, HL64 b)  (10 points)
 
 Similarly, `Usub64()` should return the value `r` such that<br>
 _R = r.hi * 2<sup>32</sup> + r.lo_ and _R = (A - B) if A >= B and R = (2<sup>64</sup> + A - B) if A < B_.
 
 Note that when _A_ is smaller than _B_, we have a _borrow_ from the 65th bit of _A_.
 
-### Umul64 (HL64 a, HL64 b)
+### Umul64 (HL64 a, HL64 b)  (30 points)
 
 `Umul64()` should return the value `r` such that<br>
 _R = r.hi * 2<sup>32</sup> + r.lo_ and _R = (A * B) mod 2<sup>64</sup>_.
 
 In order to represent _(A * B)_ correctly, we require the total of 128 bits. Similar to the addition, _R_ represents the low 64 bits of the true product, truncating all the bits of _(A * B)_ that do not fit into 64 bits.
 
-### Udiv64 (HL64 a, HL64 b)
+### Udiv64 (HL64 a, HL64 b)  (50 points)
 
 `Udiv64()` should return the value `r` such that<br>
 _R = r.hi * 2<sup>32</sup> + r.lo_ and _R = (A / B) if B != 0 and R = 0 if B == 0_.
